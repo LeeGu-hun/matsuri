@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.slide{
+	width:500px;
+	overflow:hidden;
+	position:relative;
+	margin:0 auto;
+	}
+
+.slide ul{
+	width:2500px;
+	list-style: none;
+	font-size:0;
+}
+
+.slide ul li{
+	display:inline-block;
+}
+
+.slide ul li img{
+	width:500px;
+	height:400px;
+}
+
+
+.slide button.prev{
+	position:absolute;
+	left:0;
+	top:220px;
+}
+
+.slide button.next{
+	position:absolute;
+	right:0;
+	top: 220px;
+}
