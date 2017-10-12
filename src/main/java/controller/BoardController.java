@@ -55,4 +55,9 @@ public class BoardController {
 		}
 		return "board/writeEnd";
 	}
+	
+	@RequestMapping("/search")
+	public String search() {
+		return "search/search";
+	}
 }

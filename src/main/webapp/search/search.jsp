@@ -171,6 +171,7 @@
 		}
 	</style>
 <body>
+	<%@include file="/include/header.jsp"%>
 	<div id="container">
 		<div id="tab-home">
 			<!-- Nav tabs -->
@@ -305,5 +306,6 @@
 				</table>
 			</div>
 		</div>
+			<%@include file="/include/footer.jsp"%>
 </body>
 </html>

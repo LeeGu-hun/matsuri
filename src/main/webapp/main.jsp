@@ -6,92 +6,175 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>MySNS</title>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="./css/Style.css?ver=4">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+</script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
-	function register1() {
-		$("#box1r").show();
-		$("#box1l").hide();
-	}
-	function login1() {
-		$("#box1r").hide();
-		$("#box1l").show();
-	}
-	
-	function readURL(input){
-		if(input.files && input.files[0]){
-			var reader = new FileReader();
-			reader.onload = function(e){
-				$('#UploadedImg').attr('src',e.target.result);
-				$('#UploadedImg').attr('width',300);
-			}
-			reader.readAsDataURL(input.files[0]);
-		}
-	}
-	
-	$(document).ready(function(){
-		var k = 11;
-		var hid;	
-		var appendDocument = function() {
-			$.ajax({
-				type : "POST",
-				url : "scrolling.ac",
-				data : "hid="+hid+"&sp="+k+"&ep="+(k+9),
-				success : function(html){
-					if(html != null)
-					$('#contents').html($('#contents').html()+html);
-				}
-			});			
-			k+=10;
-		}
-		
-		$(window).scroll(function(){
-			hid = document.getElementById("hid").value;
-			var scrollheight = $(window).scrollTop()+$(window).height();
-			var documentheight = $(document).height();
-		
-			if(scrollheight == documentheight){
-				appendDocument();
-			}
+	$(document).ready(function() {
+		$('.carousel').carousel({
+			interval : 2000
 		});
-	});		
+	});
 </script>
 </head>
 <body>
-	<c:if test="${empty authInfo }">
-		<div class="container">
-			<div id="box1" class="center-block">
-				<div id="box1l" class="box1_1">
-					<%@include file="/login/loginForm.jsp"%>
-					<p>환영합니다</p>
-					<button type="button" class="btn btn-info"
-						onclick="javascript=register1();">회원가입하기</button>
+	<%@include file="/include/header.jsp"%>
+	<center>
+		<div id="crs" class="carousel slide" style="width: 800px;">
+			<ol class="carousel-indicators">
+				<li data-target="#crs" data-slide-to="0" class="active"></li>
+				<li data-target="#crs" data-slide-to="1"></li>
+				<li data-target="#crs" data-slide-to="2"></li>
+			</ol>
+
+			<div class="carousel-inner" style="width: 400px;">
+				<div class="item active">
+					<img src="resources/image/1.jpg" width="300px" />
+					<div class="carousel-caption"></div>
 				</div>
-				<div id="box1r" class="box1_1" style="Display: none;">
-					<%@include file="register/step1.jsp"%>
-					<button type="button" class="btn btn-danger"
-						onclick="javascript=login1();">로그인하기</button>
+				<div class="item" style="width: 400px;">
+					<img src="resources/image/3.jpg" width="300px" />
+					<div class="carousel-caption">이미지2</div>
+				</div>
+				<div class="item" style="width: 400px;">
+					<img src="resources/image/4.jpg" width="300px" />
+					<div class="carousel-caption">이미지3</div>
 				</div>
 			</div>
-			<div id="box2"></div>
+
+			<a class="left carousel-control" href="#crs" data-slide="prev"> <span
+				class="glyphicon glyphicon-chevron-left"></span>
+			</a> <a class="right carousel-control" href="#crs" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+
 		</div>
-	</c:if>
-	<c:if test="${!empty authInfo }">
-		<%@include file="/include/header.jsp"%>
-		<input type="hidden" value="${authInfo.getId() }" name="hid" id="hid" />
-		<div>
-			<p>
-				<spring:message code="login.done" />
-			</p>
-			<p>
-				<a href="<c:url value='/main'/>"> [<spring:message
-						code="go.main" />]
-				</a>
-			</p>
-			<%@include file="/board/boardWriter.jsp"%>
-			<%@include file="/board/myList.jsp"%>
-			<div id="tale" name="tale"></div>
-		</div>
-	</c:if>
+
+	</center>
+	<br>
+	<br>
+	<div style="border: 1px solid black; margin-left: 250px;"
+		class="col-md-4">
+		<table>
+			<thead>
+				<tr>
+					<th>예매율 TOP5</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>top1
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						예매율 %</td>
+				</tr>
+				<tr>
+					<td>top2</td>
+				</tr>
+				<tr>
+					<td>top3</td>
+				</tr>
+				<tr>
+					<td>top4</td>
+				</tr>
+				<tr>
+					<td>top5</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="col-md-4" style="border: 1px solid black">
+		<table>
+			<thead>
+				<tr>
+					<th>마감임박 TOP5</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>top1</td>
+				</tr>
+				<tr>
+					<td>top2</td>
+				</tr>
+				<tr>
+					<td>top3</td>
+				</tr>
+				<tr>
+					<td>top4</td>
+				</tr>
+				<tr>
+					<td>top5</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<br />
+	<div class="col-md-4"
+		style="border: 1px solid black; margin-left: 250px;">
+		<table>
+			<thead>
+				<tr>
+					<th>조회수 top5 팀별</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>top1</td>
+				</tr>
+				<tr>
+					<td>top2</td>
+				</tr>
+				<tr>
+					<td>top3</td>
+				</tr>
+				<tr>
+					<td>top4</td>
+				</tr>
+				<tr>
+					<td>top5</td>
+				</tr>
+			</tbody>
+
+		</table>
+	</div>
+
+	<div class="col-md-4" style="border: 1px solid black">
+		<table>
+			<thead>
+				<tr>
+					<th>마감임박 TOP5</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>top1</td>
+				</tr>
+				<tr>
+					<td>top2</td>
+				</tr>
+				<tr>
+					<td>top3</td>
+				</tr>
+				<tr>
+					<td>top4</td>
+				</tr>
+				<tr>
+					<td>top5</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br>
+	<%@include file="/include/footer.jsp"%>
 </body>
 </html>
