@@ -11,11 +11,12 @@
 .footer {
 	background: #21313F;
 	height: auto;
-	position: fixed;
+	position: relative;
 	width: 100%;
 	bottom:0px;
 	border-bottom: 1px solid #CCCCCC;
 	border-top: 1px solid #DDDDDD;
+	
 }
 
 .footer h3 {

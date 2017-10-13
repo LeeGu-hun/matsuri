@@ -60,4 +60,34 @@ public class BoardController {
 	public String search() {
 		return "search/search";
 	}
+	
+	@RequestMapping("/detail")
+	public String detail() {
+		return "bh/StageInfo";
+	}
+	
+	@RequestMapping("/detail2")
+	public String detail2() {
+		return "bh/LocationDetail";
+	}
+	
+	@RequestMapping("/detail3")
+	public String detail3() {
+		return "bh/LocationInfo";
+	}
+	
+	@RequestMapping("/detail4")
+	public String detail4() {
+		return "bh/teamDetail";
+	}
+	
+	@RequestMapping("/detail5")
+	public String detail5() {
+		return "bh/yemaeDetail";
+	}
+	
+	@RequestMapping("/detail6")
+	public String detail6() {
+		return "bh/yemaeList";
+	}
 }

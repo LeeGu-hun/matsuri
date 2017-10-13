@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
@@ -77,21 +77,22 @@
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
+<%@include file="/include/header.jsp"%>
 	<div style="float: left; width: 50%; height: auto;">
 		<br> <br>
 		<div class="slide">
 			<button class="prev" type="button">
-				<img src="image/prev.png" alt="" />
+				<img src="images/prev.png" alt="" />
 			</button>
 			<ul>
-				<li><img src="image/changwon1.jpg" alt="" /></li>
-				<li><img src="image/changwon2.jpg" alt="" /></li>
-				<li><img src="image/changwon3.jpg" alt="" /></li>
-				<li><img src="image/changwon4.jpg" alt="" /></li>
-				<li><img src="image/changwon5.jpg" alt="" /></li>
+				<li><img src="images/changwon1.jpg" alt="" /></li>
+				<li><img src="images/changwon2.jpg" alt="" /></li>
+				<li><img src="images/changwon3.jpg" alt="" /></li>
+				<li><img src="images/changwon4.jpg" alt="" /></li>
+				<li><img src="images/changwon5.jpg" alt="" /></li>
 			</ul>
 			<button class="next" type="button">
-				<img src="image/next.png" alt="" />
+				<img src="images/next.png" alt="" />
 			</button>
 		</div>
 		<br>
@@ -206,7 +207,7 @@
 		<textarea id="content" maxlength="150" placeholder="리뷰를 입력해주세요.(150자 이내)" style="width:700px; height:40px"></textarea>
 		<span id="counter">###</span>
 		
-		<a href="#" class="ui violet button">작성하기</a></center></div>
+		<a href="/matsuri/detail3" class="ui violet button">작성하기</a></center></div>
 		<center>
 		<table>
 		<thead>
@@ -219,8 +220,8 @@
 		<tbody>
 		<tr>
 		<td>1</td>
-		<td><div style="CLEAR: both;	PADDING-RIGHT: 0px;	PADDING-LEFT: 0px;	BACKGROUND: url(image/icon_star2.gif) 0px 0px;	FLOAT: left;	PADDING-BOTTOM: 0px;	MARGIN: 0px;	WIDTH: 90px;	PADDING-TOP: 0px;	HEIGHT: 18px;">
-	<p style="WIDTH: 10%; PADDING-RIGHT:0px;	PADDING-LEFT:0px;	BACKGROUND: url(image/icon_star.gif) 0px 0px;	PADDING-BOTTOM: 0px;	MARGIN: 0px;	PADDING-TOP: 0px;	HEIGHT: 18px;">
+		<td><div style="CLEAR: both;	PADDING-RIGHT: 0px;	PADDING-LEFT: 0px;	BACKGROUND: url(images/icon_star2.gif) 0px 0px;	FLOAT: left;	PADDING-BOTTOM: 0px;	MARGIN: 0px;	WIDTH: 90px;	PADDING-TOP: 0px;	HEIGHT: 18px;">
+	<p style="WIDTH: 10%; PADDING-RIGHT:0px;	PADDING-LEFT:0px;	BACKGROUND: url(images/icon_star.gif) 0px 0px;	PADDING-BOTTOM: 0px;	MARGIN: 0px;	PADDING-TOP: 0px;	HEIGHT: 18px;">
 	</p>
 	</div></td>
 		<td>재밌네요 하항</td>
@@ -230,5 +231,6 @@
 		</table>
 	</div>
 	</center>
+	
 </body>
 </html>

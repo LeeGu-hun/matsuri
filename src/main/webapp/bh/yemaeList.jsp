@@ -72,6 +72,7 @@
 
 </head>
 <body>
+<%@include file="/include/header.jsp"%>
 <h2>관람 기록</h2>
 <hr color="#EFEFEF" width="80%">
 <center>
@@ -107,7 +108,7 @@
 			<tr style="text-align:center">
 			
 				<td width="30%">
-					<img src="image/dg.jpg" />
+					<img src="images/dg.jpg" />
 				</td>
 				<td width="70%">
 					zz

@@ -46,27 +46,7 @@
  </script>
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="js/lightslider.js"></script>
-<script>
-	$(document).ready(function() {
-		$("#content-slider").lightSlider({
-			loop : true,
-			keyPress : true
-		});
-		$('#image-gallery').lightSlider({
-			gallery : true,
-			item : 1,
-			thumbItem : 9,
-			slideMargin : 0,
-			speed : 500,
-			auto : true,
-			loop : true,
-			onSliderLoad : function() {
-				$('#image-gallery').removeClass('cS-hidden');
-			}
-		});
-	});
-	
+<script>	
 	$(function() {
 	      $('#content').keyup(function (e){
 	          var content = $(this).val();
@@ -77,8 +57,9 @@
 	});
 </script>
 
- 
 <style>
+
+
 ul {
 	list-style: none outside none;
 	padding-left: 0;
@@ -107,6 +88,7 @@ ul {
 </style>
 </head>
 <body>
+<%@include file="/include/header.jsp"%>
 		<h2>공연 상세 보기</h2>
 <hr color="#EFEFEF" width="80%">		
 		<div>
@@ -114,17 +96,17 @@ ul {
 		<center>
 			<div class="slide">
 			<button class="prev" type="button">
-				<img src="image/prev.png" alt="" />
+				<img src="images/prev.png" alt="" />
 			</button>
 			<ul>
-				<li><img src="image/mjc.jpg" alt="" /></li>
-				<li><img src="image/changwon2.jpg" alt="" /></li>
-				<li><img src="image/changwon3.jpg" alt="" /></li>
-				<li><img src="image/changwon4.jpg" alt="" /></li>
-				<li><img src="image/changwon5.jpg" alt="" /></li>
+				<li><img src="images/mjc.jpg" alt="" /></li>
+				<li><img src="images/changwon2.jpg" alt="" /></li>
+				<li><img src="images/changwon3.jpg" alt="" /></li>
+				<li><img src="images/changwon4.jpg" alt="" /></li>
+				<li><img src="images/changwon5.jpg" alt="" /></li>
 			</ul>
 			<button class="next" type="button">
-				<img src="image/next.png" alt="" />
+				<img src="images/next.png" alt="" />
 			</button>
 		</div>
 		</center>
@@ -196,7 +178,7 @@ ul {
 		<center>
 		<br>
 		<b>예매 가능 기간</b> : 2017.05.01~2017.05.10 &nbsp; &nbsp; &nbsp;
-		<a href="24.jsp" class="ui violet button">예매 하러 가기</a>
+		<a href="/matsuri/detail2" class="ui violet button">예매 하러 가기</a>
 		<br>
 		<br>
 		<hr color="#EFEFEF" width="600px">
@@ -252,8 +234,8 @@ ul {
 		<tbody>
 		<tr>
 		<td>1</td>
-		<td><div style="CLEAR: both;	PADDING-RIGHT: 0px;	PADDING-LEFT: 0px;	BACKGROUND: url(image/icon_star2.gif) 0px 0px;	FLOAT: left;	PADDING-BOTTOM: 0px;	MARGIN: 0px;	WIDTH: 90px;	PADDING-TOP: 0px;	HEIGHT: 18px;">
-	<p style="WIDTH: 80%; PADDING-RIGHT:0px;	PADDING-LEFT:0px;	BACKGROUND: url(image/icon_star.gif) 0px 0px;	PADDING-BOTTOM: 0px;	MARGIN: 0px;	PADDING-TOP: 0px;	HEIGHT: 18px;">
+		<td><div style="CLEAR: both;	PADDING-RIGHT: 0px;	PADDING-LEFT: 0px;	BACKGROUND: url(images/icon_star2.gif) 0px 0px;	FLOAT: left;	PADDING-BOTTOM: 0px;	MARGIN: 0px;	WIDTH: 90px;	PADDING-TOP: 0px;	HEIGHT: 18px;">
+	<p style="WIDTH: 80%; PADDING-RIGHT:0px;	PADDING-LEFT:0px;	BACKGROUND: url(images/icon_star.gif) 0px 0px;	PADDING-BOTTOM: 0px;	MARGIN: 0px;	PADDING-TOP: 0px;	HEIGHT: 18px;">
 	</p>
 	</div></td>
 		<td>재밌네요 하항</td>
@@ -262,5 +244,6 @@ ul {
 		</tbody>
 		</table>
 		</center>
+		<%@include file="/include/footer.jsp"%>
 </body>
 </html>

@@ -99,7 +99,7 @@ body {
 					</a>
 						<ul class="dropdown-menu multi-level">
 							<li><a href="/matsuri/member/list">공연팀 검색</a></li>
-							<li><a href="#">공연장 검색</a></li>
+							<li><a href="/matsuri/detail">공연장 검색</a></li>
 						</ul></li>
 					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">사이트 정보<b class="caret"></b>
 					</a>

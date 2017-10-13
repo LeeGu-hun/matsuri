@@ -9,11 +9,7 @@
 	function init(){
 		container = jQuery(".slide ul");
 		max = container.children().length;
-		
-		console.log("init");
-		
 		events();
-		
 		interval = setInterval(next, 3000);
 	}
 	

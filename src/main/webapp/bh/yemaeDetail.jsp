@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<%@include file="/include/header.jsp"%>
 <h2>예매 내역</h2>
 <hr color="#EFEFEF" width="80%">
 <center>
@@ -35,7 +35,7 @@
 			</tr>
 		</table>
 
-		<a href="#" class="ui button">확인</a>
+		<a href="/matsuri/detail6" class="ui button">확인</a>
 		<a href="#" class="ui button">예매 취소 하기</a>
 		
 		</center>
