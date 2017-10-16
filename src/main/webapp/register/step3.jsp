@@ -5,17 +5,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><spring:message code="member.register" /></title>
+	<title>로그인이 완료되었습니다.</title>
 </head>
 <body>
+<%@include file="/include/header.jsp"%>
+<div align="center">
 	<p>
-		<spring:message code="register.done"
-			arguments="${registerRequest.name}" />
+		<label style="font-size:40px">
+		회원가입을 완료했습니다.<br>
+		로그인 해주세요</label>
 	</p>
 	<p>
-		<a href="<c:url value='/main'/>">
-			[<spring:message code="go.main" />]
+		<a href="<c:url value='/login/loginForm'/>">
+			<input type="submit" class="btn btn-primary" value="로그인 페이지로 이동"/>
 		</a>
 	</p>
+	</div>
 </body>
 </html>

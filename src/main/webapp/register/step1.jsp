@@ -14,6 +14,7 @@
 <div align="center">
 	<h2>약관</h2>
 	<br>
+	<h2>Step1</h2>
 	<h2>이용약관(필수)</h2>
 
 	<table border="1">

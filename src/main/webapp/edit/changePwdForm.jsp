@@ -6,20 +6,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title><spring:message code="change.pwd.title" /></title>
+<title>회원님의 회원정보 확인을 위해 비밀번호를 한번 더 입력해 주세요</title>
 </head>
 <body>
 	<%@include file="/include/header.jsp"%>
 	<form:form>
 		<p>
-			<label><spring:message code="currentPassword" />:<br>
-			<form:password path="currentPassword" /> <form:errors path="currentPassword" /> </label>
+			<label style="font-size:20px">아이디 : <spring:message
+					arguments="${authInfo.name}" /></label>
 		</p>
 		<p>
-			<label><spring:message code="newPassword" />:<br> <form:password
-					path="newPassword" /> <form:errors path="newPassword" /> </label>
+			<label style="font-size:20px">비밀번호 : <input type="password" />
+			</label>
 		</p>
-		<input type="submit" class="btn btn-info" value="<spring:message code="change.btn" />">
+		<input type="submit" class="btn btn-primary"
+			value="다음">
 	</form:form>
 </body>
 </html>
