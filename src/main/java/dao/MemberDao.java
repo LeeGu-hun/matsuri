@@ -4,8 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -33,7 +31,8 @@ public class MemberDao {
 	}
 
 	public Member selectByEmail(String email) {
-		List<Member> results = jdbcTemplate.query("select * from MEMBER where EMAIL = ?", new RowMapper<Member>() {
+
+		List<Member> results = jdbcTemplate.query("select * from member where email = ? ", new RowMapper<Member>() {
 			@Override
 			public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
 				Member member = new Member(rs.getString("EMAIL"), rs.getString("PASSWORD"), rs.getString("NAME"),
@@ -47,22 +46,20 @@ public class MemberDao {
 	}
 
 	public void insert(final Member member) {
-		KeyHolder keyHolder = new GeneratedKeyHolder();
 		jdbcTemplate.update(new PreparedStatementCreator() {
 			@Override
 			public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
 				PreparedStatement pstmt = con.prepareStatement(
-						"insert into MEMBER (EMAIL, PASSWORD, NAME, REGDATE) " + "values (?, ?, ?, ?)",
+						"insert into MEMBER (id, EMAIL, PASSWORD, NAME, REGDATE) " + "values (id.nextval, ?, ?, ?, sysdate)",
 						new String[] { "ID" });
 				pstmt.setString(1, member.getEmail());
 				pstmt.setString(2, member.getPassword());
 				pstmt.setString(3, member.getName());
-				pstmt.setTimestamp(4, new Timestamp(member.getRegisterDate().getTime()));
 				return pstmt;
 			}
-		}, keyHolder);
-		Number keyValue = keyHolder.getKey();
-		member.setId(keyValue.longValue());
+		});
+		/*Number keyValue = keyHolder.getKey();
+		member.setId(keyValue.longValue());*/
 	}
 
 	public void update(Member member) {

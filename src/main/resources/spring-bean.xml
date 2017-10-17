@@ -10,13 +10,16 @@
 
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
-		destroy-method="close">
-		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://localhost/db7?characterEncoding=utf8" />
-		<property name="user" value="db7" />
-		<property name="password" value="aaaa" />
-	</bean>
+	
+	
+ <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+     <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+     <property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe" />
+     <property name="username" value="db7" />
+     <property name="password" value="aaaa" />
+  </bean>
+
+
 
 	<bean id="transactionManager" 
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

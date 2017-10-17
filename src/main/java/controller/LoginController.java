@@ -81,10 +81,7 @@ public class LoginController {
 			}
 			response.addCookie(rememberCookie);
 			//List<Board> boardList = boardDao.getList();
-			
-			List<Board> boardList = boardDao.getList(authInfo.getId(),1,10);
-			model.addAttribute("boardList", boardList);
-			model.addAttribute("writerRequest", new WriterRequest());
+
 			return "main";
 		} catch (IdPasswordNotMatchingException e) {
 			errors.reject("idPasswordNotMatching");

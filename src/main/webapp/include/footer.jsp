@@ -1,127 +1,79 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+   pageEncoding="UTF-8"%>
 <style>
+body, html {
+   width: 100%;
+   height: 100%;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+li {
+   list-style: none
+}
+
+a {
+   text-decoration: none;
+   color: #8b8a8a;
+}
+
+.wrap {
+   min-height: 100%;
+   position: relative;
+   width: 100%;
+}
+
+.content {
+   padding-bottom: 150px;
+   height: 400px
+}
 
 .footer {
-	background: #21313F;
-	height: auto;
-	position: relative;
-	width: 100%;
-	bottom:0px;
-	border-bottom: 1px solid #CCCCCC;
-	border-top: 1px solid #DDDDDD;
-	
-}
-
-.footer h3 {
-	border-bottom: 1px solid #BAC1C8;
-	color: #fff;
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 27px;
-	padding: 40px 0 10px;
-	text-transform: uppercase;
-}
-.footer ul {
-	font-size: 13px;
-	list-style-type: none;
-	margin-left: 0;
-	padding-left: 0;
-	margin-top: 15px;
-	color: #F5F5F5;
-}
-.footer ul li a {
-	padding: 0 0 5px 0;
-	display: block;
-}
-.footer a {
-	color: #F5F5F5
-}
-.supportLi h4 {
-	font-size: 20px;
-	font-weight: lighter;
-	line-height: normal;
-	margin-bottom: 0 !important;
-	padding-bottom: 0;
-}
-
-.bg-gray {
-	background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);
-	box-shadow: 0 1px 0 #B4B3B3;
-}
-
-.footer-bottom {
-	background: #E3E3E3;
-	border-top: 1px solid #DDDDDD;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-.footer-bottom p.pull-left {
-	padding-top: 6px;
+   margin-top: -150px;
+   clear: both;
+   position: relative;
 }
 </style>
-</head>
-<body>
-
-	<footer>
-    <div class="footer" id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h3> Contact </h3>
+<div class="wrap">
+</div>
+<div class="footer">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="container">
+       <div class="row">
+           <div class="col-md-4">
+                  <h3>Site Map:</h3>
                     <ul>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3> Important Links </h3>
-                    <ul>
-                        <li> <a href="#"> Admission </a> </li>
-                        <li> <a href="#"> Academic </a> </li>
-                        <li> <a href="#"> Career </a> </li>
-                        <li> <a href="#"> Administration </a> </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3> Location </h3>
-                    <ul>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                    </ul>
-                </div>
-            </div>
-            <!--/.row-->
-        </div>
-        <!--/.container-->
-    </div>
-    <!--/.footer-->
-
-    <!-- <div class="footer-bottom">
-        <div class="container">
-            <p class="pull-left"> Copyright © 2017, JKKNIU. All rights reserved.</p>
-            <div class="pull-right">
-                <ul class="nav nav-pills payments">
-                    <li><i class="fa fa-cc-visa"></i></li>
-                    <li><i class="fa fa-cc-mastercard"></i></li>
-                    <li><i class="fa fa-cc-amex"></i></li>
-                    <li><i class="fa fa-cc-paypal"></i></li>
+                    <li><a href=""><i class="fa fa-file"></i> About</a></li>
+                    <li><a href="">Food's and Cancer</a></li>
+                    <li><a href="">Food's and Arthritis</a></li>
+                    <li><a href="">The Plant Food Diet</a></li>
                 </ul>
+           </div>
+           <div class="col-md-4">
+                   <h3>Contact Me:</h3>
+                    <p>Have a question or feedback? Contact me!</p>
+                    <p><a href="" title="Contact me!"><i class="fa fa-envelope"></i> Contact</a></p>
             </div>
-        </div>
-    </div> -->
-    <!--/.footer-bottom-->
-
-</footer>
-</body>
-</html>
+           <div class="col-md-4">
+               <h3>Follow:</h3>
+             
+             
+    <a href="" id="gh" target="_blank" title="Twitter"><span class="fa-stack fa-lg">
+      <i class="fa fa-square-o fa-stack-2x"></i>
+      <i class="fa fa-twitter fa-stack-1x"></i>
+    </span>
+    Twitter</a>
+    <a href=""  target="_blank" title="GitHub"><span class="fa-stack fa-lg">
+      <i class="fa fa-square-o fa-stack-2x"></i>
+      <i class="fa fa-github fa-stack-1x"></i>
+    </span>
+    GitHub</a>
+    
+               
+           </div>
+       </div>
+    </div>
+</div>

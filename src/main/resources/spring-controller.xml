@@ -17,7 +17,6 @@
 
 	<bean class="controller.LoginController">
 		<property name="authService" ref="authService" />
-		<property name = "boardDao" ref="boardDao"/>
 	</bean>
 
 	<bean class="controller.LogoutController" />

@@ -38,7 +38,7 @@ public class RegisterController {
 
 	@RequestMapping(value = "/register/step2", method = RequestMethod.GET)
 	public String handleStep2Get() {
-		return "redirect:step1";
+		return "register/step1";
 	}
 
 	@RequestMapping(value = "/register/step3", method = RequestMethod.POST)
