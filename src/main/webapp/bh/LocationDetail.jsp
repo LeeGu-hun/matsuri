@@ -82,17 +82,17 @@
 		<br> <br>
 		<div class="slide">
 			<button class="prev" type="button">
-				<img src="images/prev.png" alt="" />
+				<img src="image/prev.png" alt="" />
 			</button>
 			<ul>
-				<li><img src="images/changwon1.jpg" alt="" /></li>
-				<li><img src="images/changwon2.jpg" alt="" /></li>
-				<li><img src="images/changwon3.jpg" alt="" /></li>
-				<li><img src="images/changwon4.jpg" alt="" /></li>
-				<li><img src="images/changwon5.jpg" alt="" /></li>
+				<li><img src="image/changwon1.jpg" alt="" /></li>
+				<li><img src="image/changwon2.jpg" alt="" /></li>
+				<li><img src="image/changwon3.jpg" alt="" /></li>
+				<li><img src="image/changwon4.jpg" alt="" /></li>
+				<li><img src="image/changwon5.jpg" alt="" /></li>
 			</ul>
 			<button class="next" type="button">
-				<img src="images/next.png" alt="" />
+				<img src="image/next.png" alt="" />
 			</button>
 		</div>
 		<br>
@@ -207,7 +207,7 @@
 		<textarea id="content" maxlength="150" placeholder="리뷰를 입력해주세요.(150자 이내)" style="width:700px; height:40px"></textarea>
 		<span id="counter">###</span>
 		
-		<a href="/matsuri/detail3" class="ui violet button">작성하기</a></center></div>
+		<a href="#" class="ui violet button">작성하기</a></center></div>
 		<center>
 		<table>
 		<thead>
@@ -220,8 +220,8 @@
 		<tbody>
 		<tr>
 		<td>1</td>
-		<td><div style="CLEAR: both;	PADDING-RIGHT: 0px;	PADDING-LEFT: 0px;	BACKGROUND: url(images/icon_star2.gif) 0px 0px;	FLOAT: left;	PADDING-BOTTOM: 0px;	MARGIN: 0px;	WIDTH: 90px;	PADDING-TOP: 0px;	HEIGHT: 18px;">
-	<p style="WIDTH: 10%; PADDING-RIGHT:0px;	PADDING-LEFT:0px;	BACKGROUND: url(images/icon_star.gif) 0px 0px;	PADDING-BOTTOM: 0px;	MARGIN: 0px;	PADDING-TOP: 0px;	HEIGHT: 18px;">
+		<td><div style="CLEAR: both;	PADDING-RIGHT: 0px;	PADDING-LEFT: 0px;	BACKGROUND: url(image/icon_star2.gif) 0px 0px;	FLOAT: left;	PADDING-BOTTOM: 0px;	MARGIN: 0px;	WIDTH: 90px;	PADDING-TOP: 0px;	HEIGHT: 18px;">
+	<p style="WIDTH: 10%; PADDING-RIGHT:0px;	PADDING-LEFT:0px;	BACKGROUND: url(image/icon_star.gif) 0px 0px;	PADDING-BOTTOM: 0px;	MARGIN: 0px;	PADDING-TOP: 0px;	HEIGHT: 18px;">
 	</p>
 	</div></td>
 		<td>재밌네요 하항</td>
@@ -231,6 +231,6 @@
 		</table>
 	</div>
 	</center>
-	
+	<%@include file="/include/footer.jsp"%>
 </body>
 </html>

@@ -108,7 +108,7 @@
 			<tr style="text-align:center">
 			
 				<td width="30%">
-					<img src="images/dg.jpg" />
+					<img src="image/dg.jpg" />
 				</td>
 				<td width="70%">
 					zz

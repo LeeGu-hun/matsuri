@@ -35,7 +35,7 @@
 			</tr>
 		</table>
 
-		<a href="/matsuri/detail6" class="ui button">확인</a>
+		<a href="#" class="ui button">확인</a>
 		<a href="#" class="ui button">예매 취소 하기</a>
 		
 		</center>
