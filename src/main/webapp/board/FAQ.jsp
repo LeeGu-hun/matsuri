@@ -6,10 +6,12 @@
 <head>
 <title>Home</title>
 
-	<script
+<script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
+  
+
 <script>
 		
 		function search(){
@@ -103,7 +105,7 @@
 
 	</style>
 <body>
-
+<%@include file="/include/header.jsp"%>
 <h2>FAQ / 자주묻는 질문</h2>
 	<div id="container">
 		<div id="tab-home">
@@ -213,5 +215,6 @@
 				
 				<option></option>
 			</select>
+<%@include file="/include/footer.jsp"%>
 </body>
 </html>
